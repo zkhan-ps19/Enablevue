@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{52BD8225-7A0B-4E7A-892F-C12463319BEF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RESTfulAPI</RootNamespace>
+    <AssemblyName>RESTfulAPI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocX">
+      <HintPath>C:\Documents and Settings\srasul\My Documents\Downloads\DocX.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="WebPages\AddUser.aspx" />
+    <Content Include="WebPages\ContentEditor.aspx" />
+    <Content Include="WebPages\Controls\CustomPaging.ascx" />
+    <Content Include="WebPages\ListArchiveContentRequest.aspx" />
+    <Content Include="WebPages\DownloadContent.aspx" />
+    <Content Include="WebPages\ForgotPassword.aspx" />
+    <Content Include="WebPages\GetContent.aspx" />
+    <Content Include="WebPages\Images\btn-Back.png" />
+    <Content Include="WebPages\Images\btn-Download.png" />
+    <Content Include="WebPages\Images\btn-SendTestEmail.png" />
+    <Content Include="WebPages\Images\btn-submit.png" />
+    <Content Include="WebPages\Images\failed.png" />
+    <Content Include="WebPages\Images\info.png" />
+    <Content Include="WebPages\Images\success.png" />
+    <Content Include="WebPages\js\Main.js" />
+    <Content Include="WebPages\Setting.aspx" />
+    <Content Include="WebPages\DeleteUser_AJaxCall.aspx" />
+    <Content Include="WebPages\Images\btn-adduser.png" />
+    <Content Include="WebPages\Images\btn-Cancel.png" />
+    <Content Include="WebPages\Images\btn-save.png" />
+    <Content Include="WebPages\ListUsers.aspx" />
+    <Content Include="WebPages\Login.aspx" />
+    <Content Include="WebPages\Styles\StyleSheet.css" />
+    <Content Include="Global.asax">
+      <CustomToolNamespace>RESTfulAPI.Global</CustomToolNamespace>
+    </Content>
+    <Content Include="WebPages\Images\bg-inputText.png" />
+    <Content Include="WebPages\Images\bg-login.png" />
+    <Content Include="WebPages\Images\bg.jpg" />
+    <Content Include="WebPages\Images\bg.png" />
+    <Content Include="WebPages\Images\btn-Edit.png" />
+    <Content Include="WebPages\Images\btn-Export.png" />
+    <Content Include="WebPages\Images\btn-login.png" />
+    <Content Include="WebPages\Images\btn-Update.png" />
+    <Content Include="WebPages\Images\delete.png" />
+    <Content Include="WebPages\Images\edite.png" />
+    <Content Include="WebPages\Images\icon-search.png" />
+    <Content Include="WebPages\Images\logo.png" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="WebPages\ListActiveContentRequest.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API\APIContent.cs" />
+    <Compile Include="API\APIWindowsService.cs" />
+    <Compile Include="API\IAPIContent.cs" />
+    <Compile Include="API\IAPIWindowsService.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="API\APIWorkRequests.cs" />
+    <Compile Include="API\IAPIWorkRequests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EVueSharedClass.cs" />
+    <Compile Include="WebPages\AddUser.aspx.cs">
+      <DependentUpon>AddUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\AddUser.aspx.designer.cs">
+      <DependentUpon>AddUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\ContentEditor.aspx.cs">
+      <DependentUpon>ContentEditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\ContentEditor.aspx.designer.cs">
+      <DependentUpon>ContentEditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\Controls\CustomPaging.ascx.cs">
+      <DependentUpon>CustomPaging.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\Controls\CustomPaging.ascx.designer.cs">
+      <DependentUpon>CustomPaging.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\ListArchiveContentRequest.aspx.cs">
+      <DependentUpon>ListArchiveContentRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\ListArchiveContentRequest.aspx.designer.cs">
+      <DependentUpon>ListArchiveContentRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\DownloadContent.aspx.cs">
+      <DependentUpon>DownloadContent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\DownloadContent.aspx.designer.cs">
+      <DependentUpon>DownloadContent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\GetContent.aspx.cs">
+      <DependentUpon>GetContent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\GetContent.aspx.designer.cs">
+      <DependentUpon>GetContent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\Setting.aspx.cs">
+      <DependentUpon>Setting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\Setting.aspx.designer.cs">
+      <DependentUpon>Setting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\DeleteUser_AJaxCall.aspx.cs">
+      <DependentUpon>DeleteUser_AJaxCall.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\DeleteUser_AJaxCall.aspx.designer.cs">
+      <DependentUpon>DeleteUser_AJaxCall.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\ListActiveContentRequest.aspx.cs">
+      <DependentUpon>ListActiveContentRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\ListActiveContentRequest.aspx.designer.cs">
+      <DependentUpon>ListActiveContentRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\ListUsers.aspx.cs">
+      <DependentUpon>ListUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\ListUsers.aspx.designer.cs">
+      <DependentUpon>ListUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="WebPages\Main.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Label\Label.skin" />
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{BFEFC810-C7DD-4E3D-B3EF-56DFEE87EECA}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{7A7C9EDA-C1B8-453B-AAB7-3E1E789F7EC4}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4848</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+          <EnableWcfTestClientForSVCDefaultValue>True</EnableWcfTestClientForSVCDefaultValue>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

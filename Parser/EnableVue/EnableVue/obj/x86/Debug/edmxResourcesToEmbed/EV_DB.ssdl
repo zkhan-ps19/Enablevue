@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EnableVue_DBModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.3.5" ProviderManifestToken="3.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="EnableVue_DBModelStoreContainer">
+    <EntitySet Name="Batch" EntityType="EnableVue_DBModel.Store.Batch" store:Type="Tables" />
+    <EntitySet Name="DetailedLOG" EntityType="EnableVue_DBModel.Store.DetailedLOG" store:Type="Tables" />
+    <EntitySet Name="FilesProcessed" EntityType="EnableVue_DBModel.Store.FilesProcessed" store:Type="Tables" />
+    <EntitySet Name="ServiceState" EntityType="EnableVue_DBModel.Store.ServiceState" store:Type="Tables" />
+    <EntitySet Name="Settings" EntityType="EnableVue_DBModel.Store.Settings" store:Type="Tables" />
+    <EntitySet Name="SimpleLog" EntityType="EnableVue_DBModel.Store.SimpleLog" store:Type="Tables" />
+    <EntitySet Name="UserTokens" EntityType="EnableVue_DBModel.Store.UserTokens" store:Type="Tables" />
+  </EntityContainer>
+  <EntityType Name="Batch">
+    <Key>
+      <PropertyRef Name="Batch_Number" />
+    </Key>
+    <Property Name="Batch_Number" Type="int" Nullable="false" />
+    <Property Name="startTime" Type="datetime" />
+    <Property Name="endTime" Type="datetime" />
+    <Property Name="fileProcessed" Type="int" />
+    <Property Name="filesFailed" Type="int" />
+    <Property Name="folderpath" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="DetailedLOG">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Log" Type="nvarchar" MaxLength="500" />
+    <Property Name="time" Type="datetime" />
+  </EntityType>
+  <EntityType Name="FilesProcessed">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="fileName" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="contentID" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="parsed" Type="bit" Nullable="false" />
+    <Property Name="uploaded" Type="bit" Nullable="false" />
+    <Property Name="error" Type="bit" Nullable="false" />
+    <Property Name="contentData1" Type="nvarchar" />
+    <Property Name="contentData2" Type="nvarchar" />
+    <Property Name="title" Type="nvarchar" MaxLength="500" />
+    <Property Name="source" Type="nvarchar" />
+    <Property Name="category" Type="nvarchar" MaxLength="1000" />
+    <Property Name="tag" Type="nvarchar" MaxLength="1000" />
+    <Property Name="author" Type="nvarchar" MaxLength="100" />
+    <Property Name="batchNumber" Type="int" />
+  </EntityType>
+  <EntityType Name="ServiceState">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="isrunning" Type="bit" Nullable="false" />
+    <Property Name="waitingforfiles" Type="bit" Nullable="false" />
+    <Property Name="processignbatch" Type="bit" Nullable="false" />
+    <Property Name="batchId" Type="int" Nullable="false" />
+    <Property Name="fileid" Type="int" Nullable="false" />
+    <Property Name="time" Type="datetime" />
+    <Property Name="currentState" Type="nvarchar" MaxLength="200" />
+    <Property Name="isNotLoggedIn" Type="bit" />
+    <Property Name="isNotWebURLWorking" Type="bit" />
+    <Property Name="isNotFolderPathCorrect" Type="bit" />
+    <Property Name="isHalted" Type="bit" />
+  </EntityType>
+  <EntityType Name="Settings">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="weburl" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="folderpath" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SimpleLog">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="log" Type="nvarchar" />
+    <Property Name="time" Type="datetime" />
+  </EntityType>
+  <EntityType Name="UserTokens">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="token" Type="nvarchar" MaxLength="200" />
+    <Property Name="username" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="password" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="is_saved" Type="bit" />
+    <Property Name="last_used" Type="bit" Nullable="false" />
+  </EntityType>
+</Schema>

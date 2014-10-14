@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EnableVue_DBModelStoreContainer" CdmEntityContainer="EV_DBEntities">
+    <EntitySetMapping Name="Batches">
+      <EntityTypeMapping TypeName="EnableVue_DBModel.Batch">
+        <MappingFragment StoreEntitySet="Batch">
+          <ScalarProperty Name="Batch_Number" ColumnName="Batch_Number" />
+          <ScalarProperty Name="startTime" ColumnName="startTime" />
+          <ScalarProperty Name="endTime" ColumnName="endTime" />
+          <ScalarProperty Name="fileProcessed" ColumnName="fileProcessed" />
+          <ScalarProperty Name="filesFailed" ColumnName="filesFailed" />
+          <ScalarProperty Name="folderpath" ColumnName="folderpath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetailedLOGs">
+      <EntityTypeMapping TypeName="EnableVue_DBModel.DetailedLOG">
+        <MappingFragment StoreEntitySet="DetailedLOG">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Log" ColumnName="Log" />
+          <ScalarProperty Name="time" ColumnName="time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FilesProcesseds">
+      <EntityTypeMapping TypeName="EnableVue_DBModel.FilesProcessed">
+        <MappingFragment StoreEntitySet="FilesProcessed">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="fileName" ColumnName="fileName" />
+          <ScalarProperty Name="contentID" ColumnName="contentID" />
+          <ScalarProperty Name="parsed" ColumnName="parsed" />
+          <ScalarProperty Name="uploaded" ColumnName="uploaded" />
+          <ScalarProperty Name="error" ColumnName="error" />
+          <ScalarProperty Name="contentData1" ColumnName="contentData1" />
+          <ScalarProperty Name="contentData2" ColumnName="contentData2" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="source" ColumnName="source" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="tag" ColumnName="tag" />
+          <ScalarProperty Name="author" ColumnName="author" />
+          <ScalarProperty Name="batchNumber" ColumnName="batchNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServiceStates">
+      <EntityTypeMapping TypeName="EnableVue_DBModel.ServiceState">
+        <MappingFragment StoreEntitySet="ServiceState">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="isrunning" ColumnName="isrunning" />
+          <ScalarProperty Name="waitingforfiles" ColumnName="waitingforfiles" />
+          <ScalarProperty Name="processignbatch" ColumnName="processignbatch" />
+          <ScalarProperty Name="batchId" ColumnName="batchId" />
+          <ScalarProperty Name="fileid" ColumnName="fileid" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="currentState" ColumnName="currentState" />
+          <ScalarProperty Name="isNotLoggedIn" ColumnName="isNotLoggedIn" />
+          <ScalarProperty Name="isNotWebURLWorking" ColumnName="isNotWebURLWorking" />
+          <ScalarProperty Name="isNotFolderPathCorrect" ColumnName="isNotFolderPathCorrect" />
+          <ScalarProperty Name="isHalted" ColumnName="isHalted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Settings">
+      <EntityTypeMapping TypeName="EnableVue_DBModel.Setting">
+        <MappingFragment StoreEntitySet="Settings">
+          <ScalarProperty Name="weburl" ColumnName="weburl" />
+          <ScalarProperty Name="folderpath" ColumnName="folderpath" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SimpleLogs">
+      <EntityTypeMapping TypeName="EnableVue_DBModel.SimpleLog">
+        <MappingFragment StoreEntitySet="SimpleLog">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="log" ColumnName="log" />
+          <ScalarProperty Name="time" ColumnName="time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserTokens">
+      <EntityTypeMapping TypeName="EnableVue_DBModel.UserToken">
+        <MappingFragment StoreEntitySet="UserTokens">
+          <ScalarProperty Name="token" ColumnName="token" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="is_saved" ColumnName="is_saved" />
+          <ScalarProperty Name="last_used" ColumnName="last_used" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

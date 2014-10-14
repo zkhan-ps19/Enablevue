@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnableVueService", "EnableVueService\EnableVueService.csproj", "{409EA977-0451-4631-8EB8-5DAD07E24DED}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "EnableVueSetup", "EnableVueSetup\EnableVueSetup.vdproj", "{2DB6F851-F194-4142-BCBA-81A6ABD170EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnableVue", "EnableVue\EnableVue\EnableVue.csproj", "{3F555CD1-E289-437E-81C1-0D0D4D435BA9}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 3
+		SccProjectUniqueName0 = EnableVueService\\EnableVueService.csproj
+		SccProjectName0 = \u0022$/RestFull/Project/4-Implementation/WindowsApp/EnableVueService\u0022,\u0020FBSFAAAA
+		SccLocalPath0 = EnableVueService
+		SccProjectUniqueName1 = EnableVue\\EnableVue\\EnableVue.csproj
+		SccProjectName1 = \u0022$/RestFull/Project/4-Implementation/WindowsApp/EnableVue/EnableVue\u0022,\u0020YWRFAAAA
+		SccLocalPath1 = EnableVue\\EnableVue
+		SccLocalPath2 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{409EA977-0451-4631-8EB8-5DAD07E24DED}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{409EA977-0451-4631-8EB8-5DAD07E24DED}.Debug|Any CPU.Build.0 = Debug|x86
+		{409EA977-0451-4631-8EB8-5DAD07E24DED}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{409EA977-0451-4631-8EB8-5DAD07E24DED}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{409EA977-0451-4631-8EB8-5DAD07E24DED}.Debug|x86.ActiveCfg = Debug|x86
+		{409EA977-0451-4631-8EB8-5DAD07E24DED}.Debug|x86.Build.0 = Debug|x86
+		{409EA977-0451-4631-8EB8-5DAD07E24DED}.Release|Any CPU.ActiveCfg = Release|x86
+		{409EA977-0451-4631-8EB8-5DAD07E24DED}.Release|Mixed Platforms.ActiveCfg = Debug|x86
+		{409EA977-0451-4631-8EB8-5DAD07E24DED}.Release|Mixed Platforms.Build.0 = Debug|x86
+		{409EA977-0451-4631-8EB8-5DAD07E24DED}.Release|x86.ActiveCfg = Release|x86
+		{409EA977-0451-4631-8EB8-5DAD07E24DED}.Release|x86.Build.0 = Release|x86
+		{2DB6F851-F194-4142-BCBA-81A6ABD170EC}.Debug|Any CPU.ActiveCfg = Debug
+		{2DB6F851-F194-4142-BCBA-81A6ABD170EC}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{2DB6F851-F194-4142-BCBA-81A6ABD170EC}.Debug|x86.ActiveCfg = Debug
+		{2DB6F851-F194-4142-BCBA-81A6ABD170EC}.Release|Any CPU.ActiveCfg = Release
+		{2DB6F851-F194-4142-BCBA-81A6ABD170EC}.Release|Mixed Platforms.ActiveCfg = Release
+		{2DB6F851-F194-4142-BCBA-81A6ABD170EC}.Release|Mixed Platforms.Build.0 = Release
+		{2DB6F851-F194-4142-BCBA-81A6ABD170EC}.Release|x86.ActiveCfg = Release
+		{3F555CD1-E289-437E-81C1-0D0D4D435BA9}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{3F555CD1-E289-437E-81C1-0D0D4D435BA9}.Debug|Any CPU.Build.0 = Debug|x86
+		{3F555CD1-E289-437E-81C1-0D0D4D435BA9}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{3F555CD1-E289-437E-81C1-0D0D4D435BA9}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{3F555CD1-E289-437E-81C1-0D0D4D435BA9}.Debug|x86.ActiveCfg = Debug|x86
+		{3F555CD1-E289-437E-81C1-0D0D4D435BA9}.Debug|x86.Build.0 = Debug|x86
+		{3F555CD1-E289-437E-81C1-0D0D4D435BA9}.Release|Any CPU.ActiveCfg = Release|x86
+		{3F555CD1-E289-437E-81C1-0D0D4D435BA9}.Release|Mixed Platforms.ActiveCfg = Debug|x86
+		{3F555CD1-E289-437E-81C1-0D0D4D435BA9}.Release|Mixed Platforms.Build.0 = Debug|x86
+		{3F555CD1-E289-437E-81C1-0D0D4D435BA9}.Release|x86.ActiveCfg = Release|x86
+		{3F555CD1-E289-437E-81C1-0D0D4D435BA9}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

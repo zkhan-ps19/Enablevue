@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="RESTfulAPI.WebPages.Main" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+    <link href="~/WebPages/Styles/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script src="js/Main.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function EnterEvent(e) {
+            if (e.keyCode == 13) {
+                __doPostBack('<%=imgSearch.UniqueID%>', "");
+            }
+        }
+    </script>
+</head>
+<body style="width: 500px; height: 500px; text-align: center;" onload="javascript:setPage();">
+    <div id="CRL-Page">
+        <form runat="server" id="fSubmit">
+        <div id="Page-Header">
+            <div id="Logo">
+                <a href="ListActiveContentRequest.aspx">
+                    <img src="Images/logo.png" width="75" height="53" style="margin-top: 3px; border: 0;
+                        margin-left: 5px;" /></a></div>
+            <div id="Menu">
+                <a href="ListActiveContentRequest.aspx" id="RManagement">Request Management</a> <a href="ListUsers.aspx"
+                    id="UManagement">User Management </a><a href="Setting.aspx" id="USetting">Setting
+                </a>
+            </div>
+            <div id="Search">
+                <asp:TextBox ID="tbSearch" runat="server" Width="150px" onkeypress="return EnterEvent(event)"
+                    ClientIDMode="Static"></asp:TextBox>
+                <asp:ImageButton ID="imgSearch" runat="server" ImageUrl="Images/icon-search.png"
+                    ClientIDMode="Static" Width="16" Height="16" ToolTip="Search" OnClick="imgSearch_Click" />
+            </div>
+            <div id="SubMenu" style="text-align: left; margin-left: 100px; width: 250px; float: left;
+                clear: both">
+                <a href="ListActiveContentRequest.aspx" id="active">Active Requests</a> <a href="ListArchiveContentRequest.aspx"
+                    id="archive">Archive Requests</a>
+            </div>
+        </div>
+        <div style="float: right; height: 20px; margin-right: 10px; font-family: Arial; font-size: 14px;">
+            Welcome:
+            <asp:Label runat="server" ID="lbUsername" ClientIDMode="Static"></asp:Label>
+            |
+            <asp:LinkButton ID="lnkBtnLogout" runat="server" ClientIDMode="Static" OnClick="lnkBtnLogout_Click"> Logout </asp:LinkButton></div>
+        <div id="Page-Body">
+            <asp:ContentPlaceHolder ID="body" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="Page-Footer" style="background-color: #333; height: 35px; float: left; clear: both;
+            width: 100%; margin-top: 85px; font-family: Verdana, Geneva, sans-serif; font-size: 10px;
+            line-height: 35px; text-align: center; color: #CCC">
+            Copyright © 2014 EnableVue, LLC. All rights reserved.
+        </div>
+        </form>
+    </div>
+</body>
+</html>

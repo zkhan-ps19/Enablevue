@@ -1,0 +1,614 @@
+/* CSS Document */
+/*
+-----------------------------------------------------------------------------------------------------------------
+												Login Page CSS
+-----------------------------------------------------------------------------------------------------------------
+*/
+html, body
+{
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 100%;
+	line-height: 100%;
+}
+body
+{
+	background-image: url(../Images/bg.png);
+}
+#page
+{
+	width: 335px;
+	position: absolute;
+	top: 50%;
+	margin-left: -168px;
+	left: 50%;
+	margin-top: -100px;
+}
+#logo-img
+{
+	position: absolute;
+	width: 130px;
+	left: 50%;
+	margin-top: -100px;
+	margin-left: -65px;
+}
+#login-Box
+{
+	background-image: url(../Images/bg-login.png);
+	background-position: top left;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 335px;
+	height: 214px;
+}
+#login-title
+{
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	margin-left: 20px;
+	margin-top: 25px;
+	width: 60px;
+}
+#fgPassword-Box
+{
+	background-image: url(../Images/bg-login.png);
+	background-position: top left;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 335px;
+	height: 550px;
+}
+#fgPassword-title
+{
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	margin-left: 20px;
+	margin-top: 25px;
+	width: 160px;
+}
+#fgPasswordInput
+{
+	margin: 5px;
+	margin-top: 10px;
+	margin-left: 18px;
+	background-image: url(../Images/bg-inputText.png);
+	background-repeat: no-repeat;
+	height: 20px;
+	width: 299px;
+}
+#login-message
+{
+	font-size: 12px;
+	width: 100%;
+	text-align: center;
+}
+#bgInput
+{
+	margin: 5px;
+	margin-top: 10px;
+	margin-left: 18px;
+	background-image: url(../Images/bg-inputText.png);
+	background-repeat: no-repeat;
+	height: 80px;
+	width: 299px;
+}
+#bgBtn
+{
+	margin: 5px;
+	margin-top: 10px;
+	margin-left: 18px;
+	height: 30px;
+	width: 299px;
+}
+#FP-title a
+{
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 5px;
+	color: #F00;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 10px;
+}
+#UserNameTitle
+{
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	margin-left: 10px;
+	height: 38px;
+	line-height: 38px;
+	margin-top: 10px;
+}
+#PasswordTitle
+{
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	margin-left: 10px;
+	height: 38px;
+	line-height: 38px;
+}
+
+/*
+-----------------------------------------------------------------------------------------------------------------
+												Content Request List Page CSS
+-----------------------------------------------------------------------------------------------------------------
+*/
+#CRL-Page
+{
+	position: absolute;
+	left: 50%;
+	margin-left: -400px;
+	width: 800px;
+	background-color: #FFF;
+}
+#Page-Header
+{
+	height: 60px;
+	margin-top: 15px;
+	margin-left: 10px;
+}
+#Page-Header #Logo
+{
+	float: left;
+	width: 75px;
+	height: 55px;
+}
+#Page-Header #Menu a
+{
+	float: left;
+	height: 55px;
+	line-height: 55px;
+	margin-left: 25px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+}
+#Page-Header #SubMenu a
+{
+	float: left;
+	height: 25px;
+	line-height: 25px;
+	margin-left: 15px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+}
+#Page-Header #Search
+{
+	float: right;
+	height: 55px;
+	line-height: 55px;
+	margin-right: 25px;
+}
+#Page-Body
+{
+	margin-top: 2px;
+	border: #000 solid 1px;
+	float: left;
+	width: 98%;
+	margin-left: 7px;
+	margin-bottom: 20px;
+}
+#Page-Body #Headers
+{
+	float: left;
+	width: 100%;
+	clear: both;
+	height: 55px;
+}
+#Page-Body #Headers #Headers-title
+{
+	margin: 5px;
+	float: left;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	height: 50px;
+	line-height: 50px;
+}
+#Page-Body #Headers #Headers-Controls
+{
+	margin: 5px;
+	float: right;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+}
+#Page-Body #Filters
+{
+	float: left;
+	width: 100%;
+	clear: both;
+	height: 55px;
+	line-height: 55px;
+}
+
+#Page-Body #Filters #Filters-title
+{
+	margin: 5px;
+	float: left;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+}
+#Page-Body #Filters #Filters-Controls
+{
+	margin: 5px;
+	float: right;
+	width: 300px;
+}
+.Filters-ControlsSub
+{
+	float: left;
+	text-align: left;
+	width: 170px;
+	font-weight: bold;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+}
+
+
+#Page-Body #DataTable
+{
+	float: left;
+	width: 100%;
+	clear: both;
+}
+#Page-Body #DataTable #DataRowTitle
+{
+	margin-left: 2%;
+	float: left;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	background-color: #CCC;
+	width: 96%;
+	clear: both;
+	margin-bottom: 5px;
+}
+#Page-Body #DataTable .DataRow
+{
+	float: left;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	margin-left: 2%;
+	width: 96%;
+	clear: both;
+	background-color: #EEEEEE;
+}
+#Page-Body #DataTable .DataRowAlt
+{
+	float: left;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	margin-left: 2%;
+	width: 96%;
+	clear: both;
+	background-color: #F7F7F7;
+}
+.DataCol_WRCheck
+{
+	float: left;
+	width: 20px;
+	text-align: center;
+}
+.DataCol_WRid
+{
+	border-left: #FFF solid 1px;
+	float: left;
+	width: 40px;
+	text-align: center;
+}
+.DataCol_CRid
+{
+	float: left;
+	border-left: #FFF solid 1px;
+	width: 60px;
+	text-align: center;
+}
+.DataCol_CRname
+{
+	float: left;
+	border-left: #FFF solid 1px;
+	width: 125px;
+	text-align: center;
+}
+.DataCol_Customer
+{
+	float: left;
+	border-left: #FFF solid 1px;
+	width: 150px;
+	text-align: center;
+}
+.DataCol_ContentType
+{
+	float: left;
+	border-left: #FFF solid 1px;
+	width: 160px;
+	text-align: center;
+}
+.DataCol_ContentStatus
+{
+	float: left;
+	border-left: #FFF solid 1px;
+	width: 190px;
+	text-align: center;
+}
+.DataCol_Edit
+{
+	float: left;
+	border-left: #FFF solid 1px;
+	width: 190px;
+	text-align: center;
+}
+
+.Title_Col
+{
+	float: left;
+	text-align: center;
+	border-left: #FFF solid 1px;
+	font-weight: bold;
+}
+.Data_Col
+{
+	float: left;
+	text-align: center;
+	border-left: #FFF solid 1px;
+}
+.TitleCol12
+{
+	text-align: center;
+	border-left: #FFF solid 1px;
+	font-weight: bold;
+}
+.DataCol
+{
+	text-align: left;
+	border-left: #FFF solid 1px;
+}
+.Data_Col1
+{
+	float: left;
+	width: 19.8%;
+	text-align: center;
+	border-left: #FFF solid 1px;
+	background-color: #EEE;
+}
+
+#Table
+{
+	width: 95%;
+	display: table;
+	margin-left: 2.5%;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+}
+
+#Table #Row
+{
+	display: table-row;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	background-color: #F7F7F7;
+}
+#Table #RowEve
+{
+	display: table-row;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	background-color: #EEE;
+}
+
+#Table #Row #Col, #Table #RowEve #Col
+{
+	display: table-cell;
+	font-weight: bold;
+	width: 25%;
+	height: 30px;
+	line-height: 30px;
+	text-align: right;
+}
+#Page-Body #Controls
+{
+	float: left;
+	width: 96%;
+	clear: both;
+	margin-left: 15px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+#Edit-BTN
+{
+	height: 27px;
+	width: 78px;
+	background-image: url(../Images/btn-Edit.png);
+	background-color: transparent;
+	border-color: transparent;
+	background-repeat: no-repeat;
+}
+#Export-BTN
+{
+	margin-left: 10px;
+	height: 27px;
+	width: 78px;
+	background-image: url(../Images/btn-Export.png);
+	background-color: transparent;
+	border-color: transparent;
+	background-repeat: no-repeat;
+}
+#Update-BTN
+{
+	height: 27px;
+	width: 78px;
+	background-image: url(../Images/btn-Update.png);
+	background-color: transparent;
+	border-color: transparent;
+	background-repeat: no-repeat;
+}
+/**/
+.errorMessage
+{
+	font-family: Arial, Verdana, Tahoma;
+	font-style: normal;
+	color: Red;
+}
+.CommandButtonExt
+{
+	font-family: Verdana;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+	padding-right: 5px;
+}
+A.CommandButtonExt:link
+{
+	text-decoration: underline;
+}
+A.CommandButtonExt:visited
+{
+	text-decoration: underline;
+}
+A.CommandButtonExt:hover
+{
+	text-decoration: underline;
+}
+A.CommandButtonExt:active
+{
+	text-decoration: underline;
+}
+.simpleTextExt
+{
+	font-family: Verdana,Arial,Tahoma;
+	font-size: 12px;
+	color: #000;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.Label
+{
+	font-family: Verdana;
+	font-size: 11px;
+	text-decoration: none;
+	padding-right: 2px;
+	font-weight: bold;
+}
+.simpleTextLabel
+{
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	color: #000000;
+}
+.simpleTextLabelBlue
+{
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	color: blue;
+}
+.BoldTextLabel
+{
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+}
+.BoldTextLabelBlue
+{
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: blue;
+}
+.BoldNormalTextLabel
+{
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #000000;
+}
+.errorMessage
+{
+	font-family: Arial, Verdana, Tahoma;
+	font-size: 13px;
+	font-style: normal;
+	color: Red;
+}
+.statusMessage
+{
+	font-family: Arial, Verdana, Tahoma;
+	font-size: 13px;
+	font-style: normal;
+	color: Green;
+	padding-left: 5px;
+}
+.device
+{
+	text-align: Center;
+	font-family: Arial;
+	font-size: 13pt;
+	font-weight: bold;
+	background-color: #afe293;
+	height: 30px;
+}
+.MandatoryMessage
+{
+	font-family: Verdana,Arial,Tahoma;
+	font-size: 11px;
+	font-style: normal;
+	color: Red;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+.RequiredMessage
+{
+	font-family: Verdana,Arial,Tahoma;
+	font-size: 11px;
+	font-style: normal;
+	color: Red;
+	padding: 0;
+}
+.selectedPage
+{
+	font-weight: bold;
+	color: #F00;
+}
+.unSelectedPage
+{
+	font-weight: normal;
+	color: #000;
+}
+.textContentHintsText
+{
+	font-weight: normal;
+}
+.textContentHintsTextBold
+{
+	font-weight: bold;
+}
+.TitleCol
+{
+	font-weight: inherit;
+}
+.DataRowTitle1
+{
+	margin-left: 2%;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	background-color: #CCC;
+	width: 96%;
+	margin-bottom: 5px;
+}
+.DataRow1
+{
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	margin-left: 2%;
+	width: 96%;
+	background-color: #EEEEEE;
+}
+.DataRowAlt1
+{
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	margin-left: 2%;
+	background-color: #F7F7F7;
+}

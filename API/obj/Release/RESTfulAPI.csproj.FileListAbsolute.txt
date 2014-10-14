@@ -1,0 +1,12 @@
+D:\Projects\EnableVue\RESTfullAPI\bin\RESTfulAPI.dll
+D:\Projects\EnableVue\RESTfullAPI\bin\RESTfulAPI.pdb
+D:\Projects\EnableVue\RESTfullAPI\bin\BLL.dll
+D:\Projects\EnableVue\RESTfullAPI\bin\DocX.dll
+D:\Projects\EnableVue\RESTfullAPI\bin\Model.dll
+D:\Projects\EnableVue\RESTfullAPI\bin\DAL.dll
+D:\Projects\EnableVue\RESTfullAPI\bin\BLL.pdb
+D:\Projects\EnableVue\RESTfullAPI\bin\Model.pdb
+D:\Projects\EnableVue\RESTfullAPI\bin\DAL.pdb
+D:\Projects\EnableVue\RESTfullAPI\obj\Release\ResolveAssemblyReference.cache
+D:\Projects\EnableVue\RESTfullAPI\obj\Release\RESTfulAPI.dll
+D:\Projects\EnableVue\RESTfullAPI\obj\Release\RESTfulAPI.pdb

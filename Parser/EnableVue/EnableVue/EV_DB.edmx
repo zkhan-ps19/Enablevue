@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="EnableVue_DBModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.3.5" ProviderManifestToken="3.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="EnableVue_DBModelStoreContainer">
+          <EntitySet Name="Batch" EntityType="EnableVue_DBModel.Store.Batch" store:Type="Tables" />
+          <EntitySet Name="DetailedLOG" EntityType="EnableVue_DBModel.Store.DetailedLOG" store:Type="Tables" />
+          <EntitySet Name="FilesProcessed" EntityType="EnableVue_DBModel.Store.FilesProcessed" store:Type="Tables" />
+          <EntitySet Name="ServiceState" EntityType="EnableVue_DBModel.Store.ServiceState" store:Type="Tables" />
+          <EntitySet Name="Settings" EntityType="EnableVue_DBModel.Store.Settings" store:Type="Tables" />
+          <EntitySet Name="SimpleLog" EntityType="EnableVue_DBModel.Store.SimpleLog" store:Type="Tables" />
+          <EntitySet Name="UserTokens" EntityType="EnableVue_DBModel.Store.UserTokens" store:Type="Tables" />
+        </EntityContainer>
+        <EntityType Name="Batch">
+          <Key>
+            <PropertyRef Name="Batch_Number" />
+          </Key>
+          <Property Name="Batch_Number" Type="int" Nullable="false" />
+          <Property Name="startTime" Type="datetime" />
+          <Property Name="endTime" Type="datetime" />
+          <Property Name="fileProcessed" Type="int" />
+          <Property Name="filesFailed" Type="int" />
+          <Property Name="folderpath" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="DetailedLOG">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="Log" Type="nvarchar" MaxLength="500" />
+          <Property Name="time" Type="datetime" />
+        </EntityType>
+        <EntityType Name="FilesProcessed">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="fileName" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="contentID" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="parsed" Type="bit" Nullable="false" />
+          <Property Name="uploaded" Type="bit" Nullable="false" />
+          <Property Name="error" Type="bit" Nullable="false" />
+          <Property Name="contentData1" Type="nvarchar" />
+          <Property Name="contentData2" Type="nvarchar" />
+          <Property Name="title" Type="nvarchar" MaxLength="500" />
+          <Property Name="source" Type="nvarchar" />
+          <Property Name="category" Type="nvarchar" MaxLength="1000" />
+          <Property Name="tag" Type="nvarchar" MaxLength="1000" />
+          <Property Name="author" Type="nvarchar" MaxLength="100" />
+          <Property Name="batchNumber" Type="int" />
+        </EntityType>
+        <EntityType Name="ServiceState">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="isrunning" Type="bit" Nullable="false" />
+          <Property Name="waitingforfiles" Type="bit" Nullable="false" />
+          <Property Name="processignbatch" Type="bit" Nullable="false" />
+          <Property Name="batchId" Type="int" Nullable="false" />
+          <Property Name="fileid" Type="int" Nullable="false" />
+          <Property Name="time" Type="datetime" />
+          <Property Name="currentState" Type="nvarchar" MaxLength="200" />
+          <Property Name="isNotLoggedIn" Type="bit" />
+          <Property Name="isNotWebURLWorking" Type="bit" />
+          <Property Name="isNotFolderPathCorrect" Type="bit" />
+          <Property Name="isHalted" Type="bit" />
+        </EntityType>
+        <EntityType Name="Settings">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="weburl" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="folderpath" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SimpleLog">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="log" Type="nvarchar" />
+          <Property Name="time" Type="datetime" />
+        </EntityType>
+        <EntityType Name="UserTokens">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="token" Type="nvarchar" MaxLength="200" />
+          <Property Name="username" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="password" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="is_saved" Type="bit" />
+          <Property Name="last_used" Type="bit" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EnableVue_DBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="EV_DBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Batches" EntityType="EnableVue_DBModel.Batch" />
+          <EntitySet Name="DetailedLOGs" EntityType="EnableVue_DBModel.DetailedLOG" />
+          <EntitySet Name="FilesProcesseds" EntityType="EnableVue_DBModel.FilesProcessed" />
+          <EntitySet Name="ServiceStates" EntityType="EnableVue_DBModel.ServiceState" />
+          <EntitySet Name="Settings" EntityType="EnableVue_DBModel.Setting" />
+          <EntitySet Name="SimpleLogs" EntityType="EnableVue_DBModel.SimpleLog" />
+          <EntitySet Name="UserTokens" EntityType="EnableVue_DBModel.UserToken" />
+        </EntityContainer>
+        <EntityType Name="Batch">
+          <Key>
+            <PropertyRef Name="Batch_Number" />
+          </Key>
+          <Property Name="Batch_Number" Type="Int32" Nullable="false" />
+          <Property Name="startTime" Type="DateTime" />
+          <Property Name="endTime" Type="DateTime" />
+          <Property Name="fileProcessed" Type="Int32" />
+          <Property Name="filesFailed" Type="Int32" />
+          <Property Name="folderpath" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="DetailedLOG">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="Log" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="time" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="FilesProcessed">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="fileName" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="contentID" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="parsed" Type="Boolean" Nullable="false" />
+          <Property Name="uploaded" Type="Boolean" Nullable="false" />
+          <Property Name="error" Type="Boolean" Nullable="false" />
+          <Property Name="contentData1" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="contentData2" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="title" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="source" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="category" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="tag" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="author" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="batchNumber" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ServiceState">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="isrunning" Type="Boolean" Nullable="false" />
+          <Property Name="waitingforfiles" Type="Boolean" Nullable="false" />
+          <Property Name="processignbatch" Type="Boolean" Nullable="false" />
+          <Property Name="batchId" Type="Int32" Nullable="false" />
+          <Property Name="fileid" Type="Int32" Nullable="false" />
+          <Property Name="time" Type="DateTime" />
+          <Property Name="currentState" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="isNotLoggedIn" Type="Boolean" />
+          <Property Name="isNotWebURLWorking" Type="Boolean" />
+          <Property Name="isNotFolderPathCorrect" Type="Boolean" />
+          <Property Name="isHalted" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Setting">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="weburl" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="folderpath" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SimpleLog">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="log" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="time" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="UserToken">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="token" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="username" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="is_saved" Type="Boolean" />
+          <Property Name="last_used" Type="Boolean" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EnableVue_DBModelStoreContainer" CdmEntityContainer="EV_DBEntities">
+          <EntitySetMapping Name="Batches">
+            <EntityTypeMapping TypeName="EnableVue_DBModel.Batch">
+              <MappingFragment StoreEntitySet="Batch">
+                <ScalarProperty Name="Batch_Number" ColumnName="Batch_Number" />
+                <ScalarProperty Name="startTime" ColumnName="startTime" />
+                <ScalarProperty Name="endTime" ColumnName="endTime" />
+                <ScalarProperty Name="fileProcessed" ColumnName="fileProcessed" />
+                <ScalarProperty Name="filesFailed" ColumnName="filesFailed" />
+                <ScalarProperty Name="folderpath" ColumnName="folderpath" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DetailedLOGs">
+            <EntityTypeMapping TypeName="EnableVue_DBModel.DetailedLOG">
+              <MappingFragment StoreEntitySet="DetailedLOG">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Log" ColumnName="Log" />
+                <ScalarProperty Name="time" ColumnName="time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FilesProcesseds">
+            <EntityTypeMapping TypeName="EnableVue_DBModel.FilesProcessed">
+              <MappingFragment StoreEntitySet="FilesProcessed">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="fileName" ColumnName="fileName" />
+                <ScalarProperty Name="contentID" ColumnName="contentID" />
+                <ScalarProperty Name="parsed" ColumnName="parsed" />
+                <ScalarProperty Name="uploaded" ColumnName="uploaded" />
+                <ScalarProperty Name="error" ColumnName="error" />
+                <ScalarProperty Name="contentData1" ColumnName="contentData1" />
+                <ScalarProperty Name="contentData2" ColumnName="contentData2" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="source" ColumnName="source" />
+                <ScalarProperty Name="category" ColumnName="category" />
+                <ScalarProperty Name="tag" ColumnName="tag" />
+                <ScalarProperty Name="author" ColumnName="author" />
+                <ScalarProperty Name="batchNumber" ColumnName="batchNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServiceStates">
+            <EntityTypeMapping TypeName="EnableVue_DBModel.ServiceState">
+              <MappingFragment StoreEntitySet="ServiceState">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="isrunning" ColumnName="isrunning" />
+                <ScalarProperty Name="waitingforfiles" ColumnName="waitingforfiles" />
+                <ScalarProperty Name="processignbatch" ColumnName="processignbatch" />
+                <ScalarProperty Name="batchId" ColumnName="batchId" />
+                <ScalarProperty Name="fileid" ColumnName="fileid" />
+                <ScalarProperty Name="time" ColumnName="time" />
+                <ScalarProperty Name="currentState" ColumnName="currentState" />
+                <ScalarProperty Name="isNotLoggedIn" ColumnName="isNotLoggedIn" />
+                <ScalarProperty Name="isNotWebURLWorking" ColumnName="isNotWebURLWorking" />
+                <ScalarProperty Name="isNotFolderPathCorrect" ColumnName="isNotFolderPathCorrect" />
+                <ScalarProperty Name="isHalted" ColumnName="isHalted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Settings">
+            <EntityTypeMapping TypeName="EnableVue_DBModel.Setting">
+              <MappingFragment StoreEntitySet="Settings">
+                <ScalarProperty Name="weburl" ColumnName="weburl" />
+                <ScalarProperty Name="folderpath" ColumnName="folderpath" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SimpleLogs">
+            <EntityTypeMapping TypeName="EnableVue_DBModel.SimpleLog">
+              <MappingFragment StoreEntitySet="SimpleLog">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="log" ColumnName="log" />
+                <ScalarProperty Name="time" ColumnName="time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserTokens">
+            <EntityTypeMapping TypeName="EnableVue_DBModel.UserToken">
+              <MappingFragment StoreEntitySet="UserTokens">
+                <ScalarProperty Name="token" ColumnName="token" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="is_saved" ColumnName="is_saved" />
+                <ScalarProperty Name="last_used" ColumnName="last_used" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="EV_DB">
+        <EntityTypeShape EntityType="EnableVue_DBModel.Batch" Width="1.5" PointX="0.75" PointY="0.75" Height="1.9210009765625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EnableVue_DBModel.DetailedLOG" Width="1.5" PointX="2.75" PointY="0.75" Height="1.4279589843749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="EnableVue_DBModel.FilesProcessed" Width="1.5" PointX="0.75" PointY="3.75" Height="3.2357796223958335" IsExpanded="true" />
+        <EntityTypeShape EntityType="EnableVue_DBModel.ServiceState" Width="1.5" PointX="2.75" PointY="3.75" Height="2.9070849609374996" IsExpanded="true" />
+        <EntityTypeShape EntityType="EnableVue_DBModel.Setting" Width="1.5" PointX="4.75" PointY="0.75" Height="1.4279589843749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="EnableVue_DBModel.SimpleLog" Width="1.5" PointX="4.75" PointY="3.75" Height="1.4279589843749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="EnableVue_DBModel.UserToken" Width="1.5" PointX="6.75" PointY="0.75" Height="1.9210009765624996" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

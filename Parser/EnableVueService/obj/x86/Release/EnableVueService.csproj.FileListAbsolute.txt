@@ -1,0 +1,1 @@
+D:\Projects\EnableVue\Windows App\EnableVueService\bin\Release\EnableVueService.exe.config

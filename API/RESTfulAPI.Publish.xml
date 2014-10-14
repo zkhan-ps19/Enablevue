@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="D:\Projects\EnableVue\Publish" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="EnableVue" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/Model.dll" publishTime="09/01/2014 18:08:45" />
+    <file relUrl="WebPages/Images/info.png" publishTime="04/07/2014 19:42:21" />
+    <file relUrl="Global.asax" publishTime="01/15/2014 18:43:00" />
+    <file relUrl="WebPages/Images/bg.png" publishTime="03/12/2014 17:48:42" />
+    <file relUrl="WebPages/ForgotPassword.aspx" publishTime="03/20/2014 21:36:16" />
+    <file relUrl="WebPages/Images/btn-Cancel.png" publishTime="03/12/2014 19:22:01" />
+    <file relUrl="WebPages/DeleteUser_AJaxCall.aspx" publishTime="03/13/2014 17:46:10" />
+    <file relUrl="WebPages/DownloadContent.aspx" publishTime="04/08/2014 19:04:55" />
+    <file relUrl="WebPages/Images/bg.jpg" publishTime="03/12/2014 17:48:42" />
+    <file relUrl="WebPages/Images/btn-save.png" publishTime="03/12/2014 19:22:03" />
+    <file relUrl="bin/DAL.dll" publishTime="09/01/2014 18:08:45" />
+    <file relUrl="WebPages/Images/failed.png" publishTime="04/07/2014 19:42:21" />
+    <file relUrl="WebPages/js/Main.js" publishTime="07/21/2014 19:22:24" />
+    <file relUrl="bin/RESTfulAPI.pdb" publishTime="09/01/2014 18:08:46" />
+    <file relUrl="bin/Model.pdb" publishTime="09/01/2014 18:08:45" />
+    <file relUrl="WebPages/GetContent.aspx" publishTime="05/09/2014 15:21:17" />
+    <file relUrl="WebPages/ContentEditor.aspx" publishTime="05/09/2014 18:14:25" />
+    <file relUrl="WebPages/Images/btn-Download.png" publishTime="04/08/2014 14:29:36" />
+    <file relUrl="WebPages/ListArchiveContentRequest.aspx" publishTime="07/21/2014 17:55:09" />
+    <file relUrl="WebPages/Images/btn-Back.png" publishTime="04/08/2014 14:29:36" />
+    <file relUrl="WebPages/Setting.aspx" publishTime="07/21/2014 17:46:48" />
+    <file relUrl="WebPages/Main.Master" publishTime="07/21/2014 17:47:41" />
+    <file relUrl="WebPages/Images/btn-submit.png" publishTime="03/20/2014 20:47:42" />
+    <file relUrl="WebPages/Login.aspx" publishTime="08/13/2014 14:55:31" />
+    <file relUrl="WebPages/Images/bg-login.png" publishTime="03/12/2014 17:48:42" />
+    <file relUrl="WebPages/Images/success.png" publishTime="04/07/2014 19:42:21" />
+    <file relUrl="WebPages/Images/btn-Export.png" publishTime="03/14/2014 17:05:30" />
+    <file relUrl="bin/DAL.pdb" publishTime="09/01/2014 18:08:45" />
+    <file relUrl="bin/BLL.dll" publishTime="09/01/2014 18:08:45" />
+    <file relUrl="WebPages/Images/btn-SendTestEmail.png" publishTime="03/20/2014 19:56:21" />
+    <file relUrl="bin/DocX.dll" publishTime="04/08/2014 15:39:15" />
+    <file relUrl="bin/RESTfulAPI.dll" publishTime="09/01/2014 18:08:46" />
+    <file relUrl="WebPages/Styles/StyleSheet.css" publishTime="07/18/2014 14:30:17" />
+    <file relUrl="WebPages/AddUser.aspx" publishTime="03/20/2014 19:09:37" />
+    <file relUrl="WebPages/ListActiveContentRequest.aspx" publishTime="07/21/2014 17:49:40" />
+    <file relUrl="WebPages/Images/logo.png" publishTime="03/12/2014 17:48:42" />
+    <file relUrl="WebPages/Images/btn-adduser.png" publishTime="03/14/2014 17:05:28" />
+    <file relUrl="WebPages/Images/btn-Update.png" publishTime="03/12/2014 19:22:03" />
+    <file relUrl="bin/BLL.pdb" publishTime="09/01/2014 18:08:45" />
+    <file relUrl="App_Themes/Label/Label.skin" publishTime="03/13/2014 18:24:36" />
+    <file relUrl="Web.config" publishTime="09/01/2014 18:08:52" />
+    <file relUrl="WebPages/Images/delete.png" publishTime="03/12/2014 17:48:42" />
+    <file relUrl="WebPages/ListUsers.aspx" publishTime="03/14/2014 17:09:17" />
+    <file relUrl="WebPages/Images/btn-Edit.png" publishTime="03/12/2014 19:22:02" />
+    <file relUrl="WebPages/Images/icon-search.png" publishTime="03/12/2014 17:48:42" />
+    <file relUrl="WebPages/Images/bg-inputText.png" publishTime="03/12/2014 17:48:42" />
+    <file relUrl="WebPages/Controls/CustomPaging.ascx" publishTime="03/13/2014 13:55:59" />
+    <file relUrl="WebPages/Images/btn-login.png" publishTime="03/12/2014 19:22:03" />
+    <file relUrl="WebPages/Images/edite.png" publishTime="03/12/2014 17:48:42" />
+  </publishProfile>
+</publishData>

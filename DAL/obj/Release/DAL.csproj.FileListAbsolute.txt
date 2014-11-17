@@ -1,0 +1,7 @@
+D:\Projects\EnableVue\DAL\bin\Release\DAL.dll
+D:\Projects\EnableVue\DAL\bin\Release\DAL.pdb
+D:\Projects\EnableVue\DAL\bin\Release\Model.dll
+D:\Projects\EnableVue\DAL\bin\Release\Model.pdb
+D:\Projects\EnableVue\DAL\obj\Release\ResolveAssemblyReference.cache
+D:\Projects\EnableVue\DAL\obj\Release\DAL.dll
+D:\Projects\EnableVue\DAL\obj\Release\DAL.pdb

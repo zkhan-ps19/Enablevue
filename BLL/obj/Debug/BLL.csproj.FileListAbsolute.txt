@@ -1,0 +1,9 @@
+D:\Projects\EnableVue\BLL\bin\Debug\BLL.dll
+D:\Projects\EnableVue\BLL\bin\Debug\BLL.pdb
+D:\Projects\EnableVue\BLL\bin\Debug\DAL.dll
+D:\Projects\EnableVue\BLL\bin\Debug\Model.dll
+D:\Projects\EnableVue\BLL\bin\Debug\DAL.pdb
+D:\Projects\EnableVue\BLL\bin\Debug\Model.pdb
+D:\Projects\EnableVue\BLL\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\EnableVue\BLL\obj\Debug\BLL.dll
+D:\Projects\EnableVue\BLL\obj\Debug\BLL.pdb

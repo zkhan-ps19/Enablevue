@@ -1,0 +1,5 @@
+D:\Projects\EnableVue\Model\bin\Release\Model.dll
+D:\Projects\EnableVue\Model\bin\Release\Model.pdb
+D:\Projects\EnableVue\Model\obj\Release\ResolveAssemblyReference.cache
+D:\Projects\EnableVue\Model\obj\Release\Model.dll
+D:\Projects\EnableVue\Model\obj\Release\Model.pdb
